@@ -41,20 +41,24 @@ $(document).pngFix( );
 		<table border="0" cellpadding="0" cellspacing="0">
 		<tr>
 			<th>Kullanıcı Adı</th>
-			<td><input type="text" name="user" class="login-inp" value="<?php if(isset($_COOKIE["user"])) echo $_COOKIE["user"]; ?>" /></td>
+			<td>
+				<?php echo $username->getHtml(); ?><!--<input type="text" name="user" class="login-inp" value="<?php //if(isset($_COOKIE["user"])) echo $_COOKIE["user"]; ?>" /> -->
+			</td>
 		</tr>
 		<tr>
 			<th>Şifre</th>
-			<td><input type="password" name="pass" value="<?php if(isset($_COOKIE["pass"])) echo $_COOKIE["pass"]; else echo "************"; ?>"  onfocus="this.value=''" class="login-inp" /></td>
+			<td><?php echo $password->getHtml(); ?> <!--<input type="password" name="pass" value="<?php //if(isset($_COOKIE["pass"])) echo $_COOKIE["pass"]; else echo "************"; ?>"  onfocus="this.value=''" class="login-inp" />--></td>
 		</tr>
 		<tr>
 			<th></th>
-			<td valign="top"><input type="checkbox" class="checkbox-size" id="login-check" name="login-check" />
-			<label for="login-check">Beni Hatırla</label></td>
+			<td valign="top">
+			<?php echo $remindMe->getHtml(); ?>
+			<!--<input type="checkbox" class="checkbox-size" id="login-check" name="login-check" />
+			<label for="login-check">Beni Hatırla</label>--></td>
 		</tr>
 		<tr>
 			<th></th>
-			<td><input type="submit" name="login" class="submit-login" /></td>
+			<td><?php echo $submit->getHtml(); ?><!--<input type="submit" name="login" class="submit-login" />--></td>
 		</tr>
 		</table>
 	</div>

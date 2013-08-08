@@ -1,13 +1,8 @@
 <?php
-class OutputText{
-	
-	public $attr;
-	
-	public function __construct($attr){
-		$this->attr = $attr;
-	}
+
+class OutputText extends ComponentBase{
 
 	public function getHtml(){
-		return $this->attr["value"];
+		return isset($this->attr['value']) ? $this->attr['value'] : "";
 	}
 }
