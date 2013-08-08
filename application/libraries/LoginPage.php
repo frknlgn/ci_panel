@@ -36,11 +36,4 @@ class LoginPage{
 		$this->components->submit = new Input($attr_submit);
 	}
 
-	public function assignValues($input){
-		foreach($this->components as $component){
-			if(isset($component->attr['name'])){
-				$component->attr["value"] = $input->post($component->attr["name"]);
-			}
-		}
-	}
 }
