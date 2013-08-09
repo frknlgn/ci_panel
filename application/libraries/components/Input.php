@@ -3,7 +3,7 @@
 class Input extends ComponentBase{
 
 	public function getHtml(){
-		
+
 		$html = '<input ';
 		$html .= isset($this->attr['type']) ? 'type="'.$this->attr['type'].'" ' : '';
 		$html .= isset($this->attr['id']) ? 'type="'.$this->attr['id'].'" ' : '';

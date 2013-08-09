@@ -17,6 +17,7 @@ $(document).pngFix( );
 
 });
 </script>
+<?php echo $alert->getHtml(); ?>
 </head>
 
 <form method="post">
