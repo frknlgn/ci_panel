@@ -29,6 +29,11 @@ class Login extends CI_Controller{
 		$this->loadView();
 	}
 
+	public function logout(){
+		$this->session->unset_userdata('valid_user');
+		redirect("/login");
+	}
+
 	public function error(){
 		$this->loginBusiness->enableAlert();
 		$this->loadView();

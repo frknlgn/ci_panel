@@ -10,8 +10,10 @@ class Home extends CI_Controller{
 		}
 	}
 	
-	public function logout(){
-		$this->session->unset_userdata('valid_user');
-		redirect("/login");
+	public function index(){
+	
+		$this->load->view("tmp_header");
+		$this->load->view("ui_home");
+		$this->load->view("tmp_footer");
 	}
 }
